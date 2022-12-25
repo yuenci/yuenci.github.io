@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Tag: Ubuntu - Innis&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Innis&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Innis&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Innis&#039;s Blog"><meta property="og:url" content="https://www.enjoycoding.me/"><meta property="og:site_name" content="Innis&#039;s Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://www.enjoycoding.me/img/og_image.png"><meta property="article:author" content="Innis Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.enjoycoding.me/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.enjoycoding.me"},"headline":"Innis's Blog","image":["https://www.enjoycoding.me/img/og_image.png"],"author":{"@type":"Person","name":"Innis Yu"},"publisher":{"@type":"Organization","name":"Innis's Blog","logo":{"@type":"ImageObject","url":"https://www.enjoycoding.me/img/avatar-innis.png"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-S8CSWVRCPY" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-S8CSWVRCPY');</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css"><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/avatar-innis.png" alt="Innis&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">Ubuntu</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-12-25T05:57:56.000Z" title="2022/12/25 13:57:56">2022-12-25</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-12-25T06:37:33.908Z" title="2022/12/25 14:37:33">2022-12-25</time></span><span class="level-item">6 minutes read (About 869 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/12/25/deployed-a-full-stack-appliaction/">Deployed a full-stack appliaction</a></h1><div class="content"><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ol>
+<li>首先购买服务器</li>
+</ol>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225140706484.png" alt="image-20221225140706484"></p>
+<ol start="2">
+<li><p>然后SSH 登录服务器 或者 使用在线terminal等方式连接服务器</p>
+</li>
+<li><p>安装宝塔面板并开放端口</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec</span><br></pre></td></tr></table></figure>
+
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141221302.png" alt="image-20221225141221302"></p>
+<ol start="4">
+<li>安装Nginx</li>
+</ol>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141112257.png" alt="image-20221225141112257"></p>
+<ol start="5">
+<li>安装Docker</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"><span class="comment">#更新索引</span></span><br><span class="line"></span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common</span><br><span class="line"><span class="comment">#安装依赖</span></span><br><span class="line"></span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line"><span class="comment">#添加源仓库</span></span><br><span class="line"></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install docker-ce docker-ce-cli containerd.io</span><br><span class="line"><span class="comment">#安装最新版本</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看docker状态（正常状态如下图）</span></span><br><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure>
+
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141359391.png" alt="image-20221225141359391"></p>
+<h1 id="静态资源部分"><a href="#静态资源部分" class="headerlink" title="静态资源部分"></a>静态资源部分</h1><ol>
+<li>配置DNS解析</li>
+</ol>
+<p>因为更换了服务器， 所以需要更改域名对应的IP</p>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141656008.png" alt="image-20221225141656008"></p>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141821187.png" alt="image-20221225141821187"></p>
+<ol start="2">
+<li>设置 Cloudflare设置为 开发模式</li>
+</ol>
+<p>开发者模式不会让用户走缓存获得静态文件，而是直接去源服务器获取，这样用户可以第一时间获得最新的更新</p>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141614004.png" alt="image-20221225141614004"></p>
+<ol start="3">
+<li>把静态文件放到wwwroot目录下</li>
+</ol>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225141512800.png" alt="image-20221225141512800"></p>
+<ol start="4">
+<li>配置Nginx</li>
+</ol>
+<p>首先需要配置SSL 证书以支持Http，其次是配置 &#x2F;code ,转发请求到84端口，84端口定义了将分发哪些静态文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">   listen 443 ssl;</span><br><span class="line">   server_name enjoyCoding.com;</span><br><span class="line">    ssl on;</span><br><span class="line">    ssl_certificate   /usr/local/ssl/ssl_certificate.pem;</span><br><span class="line">    ssl_certificate_key  /usr/local/ssl/ssl_certificate_key.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    </span><br><span class="line">    location  /code/&#123;</span><br><span class="line">     proxy_pass http://127.0.0.1:84/;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">  listen 	84;</span><br><span class="line">  root   /www/wwwroot/What-does-this-code-mean;</span><br><span class="line">  index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="后端部分"><a href="#后端部分" class="headerlink" title="后端部分"></a>后端部分</h1><ol>
+<li>docker 部署</li>
+</ol>
+<p>因为之前已经把镜像上传到了docker hub(<a target="_blank" rel="noopener" href="https://hub.docker.com/repository/docker/innis/wtcm">wtcm</a>)，所以无需重新制作镜像，直接运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run innis/wtcm:1.0 -p 83:83</span><br></pre></td></tr></table></figure>
+
+<p>不过因为该镜像的API已经过期，所以需要把镜像中的文件拷贝出来重新制作镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$docker</span> <span class="built_in">cp</span> 266f4:/root/feedback_venv/feedback_venv.zip /Users/Downloads/</span><br><span class="line"><span class="comment"># docker cp [container_created:path] [dest_path]</span></span><br></pre></td></tr></table></figure>
+
+<p>镜像构建文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM python:3.8</span><br><span class="line">MAINTAINER Innis&lt;yuenci1575270674@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">WORKDIR /app</span><br><span class="line"></span><br><span class="line">RUN pip install flask &amp;&amp; \</span><br><span class="line">    pip install flask_cors &amp;&amp; \</span><br><span class="line">    pip install openai &amp;&amp; \</span><br><span class="line">    pip install gunicorn &amp;&amp; \</span><br><span class="line">    pip install gevent</span><br><span class="line"></span><br><span class="line">COPY . /app</span><br><span class="line"></span><br><span class="line">EXPOSE 83</span><br><span class="line"></span><br><span class="line"># CMD [&quot;python&quot;, &quot;main.py&quot;]</span><br><span class="line">ENTRYPOINT [&quot;gunicorn&quot; ,&quot;--config&quot;, &quot;gunicorn.py&quot;, &quot;main:app&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>修改完API Key的配置运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> docker build  -t wtcm:1.0 .</span><br></pre></td></tr></table></figure>
+
+<p>运行新镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> docker run  -it -p 83:83 wtcm:1.0</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Nginx 设置</li>
+</ol>
+<p>Flask 路由设置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/response&#x27;</span>, methods=[<span class="string">&quot;POST&quot;</span>]</span>)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>fetch 设置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&#x27;https://enjoycoding.me/api/response&#x27;</span></span><br><span class="line"></span><br><span class="line"> <span class="title function_">fetch</span>(url, options)</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (!data.<span class="property">ok</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="title class_">Error</span>(data.<span class="property">status</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> data.<span class="title function_">json</span>();</span><br><span class="line">        &#125;).<span class="title function_">then</span>(<span class="function"><span class="params">update</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">//console.log(update);</span></span><br><span class="line">        &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Nginx 设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /api/&#123;</span><br><span class="line">     proxy_pass http://0.0.0.0:83/;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="CI-x2F-CD-部分"><a href="#CI-x2F-CD-部分" class="headerlink" title="CI&#x2F;CD 部分"></a>CI&#x2F;CD 部分</h1><p>运行root 登录</p>
+<table>
+<thead>
+<tr>
+<th align="left">步骤</th>
+<th align="left">方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">修改 root 密码</td>
+<td align="left">执行命令sudo passwd root</td>
+</tr>
+<tr>
+<td align="left">输入密码</td>
+<td align="left">可以和 ubuntu 密码一致，也可以修改 (密码会让你输入两次)</td>
+</tr>
+<tr>
+<td align="left">修改 ssh 配置</td>
+<td align="left">执行命令sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</td>
+</tr>
+<tr>
+<td align="left">修    改 PermitRootLogin</td>
+<td align="left">进入 ssh 配置界面后找到PermitRootLogin，将它后面改为yes，保存 (按i进入编辑模式，编辑完esc退出，:w保存当前文件，:q退出)</td>
+</tr>
+<tr>
+<td align="left">重启 ssh 服务</td>
+<td align="left">执行命令<code>sudo service ssh restart</code></td>
+</tr>
+</tbody></table>
+<p>设置Github actions</p>
+<p><img src="/deployed-a-full-stack-appliaction/image-20221225143501590.png" alt="image-20221225143501590"></p>
+<p>workflows file</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">scp</span> <span class="string">files</span></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>]</span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@master</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">copy</span> <span class="string">file</span> <span class="string">via</span> <span class="string">ssh</span> <span class="string">password</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">appleboy/scp-action@master</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">port:</span> <span class="number">22</span></span><br><span class="line">        <span class="attr">source:</span> <span class="string">&quot;./&quot;</span> </span><br><span class="line">        <span class="attr">target:</span> <span class="string">/www/wwwroot/What-does-this-code-mean/</span></span><br></pre></td></tr></table></figure>
+
+
+
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar-innis.png" alt="Innis Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Innis Yu</p><p class="is-size-6 is-block">Hacker &amp; Full Stack Engineer</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuenci" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/yuenci"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://enjoycoding.me/code/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Code interpreter</span></span><span class="level-right"><span class="level-item tag">enjoycoding.me</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-25T05:57:56.000Z">2022-12-25</time></p><p class="title"><a href="/2022/12/25/deployed-a-full-stack-appliaction/">Deployed a full-stack appliaction</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-01T17:07:12.000Z">2022-12-02</time></p><p class="title"><a href="/2022/12/02/about/">About</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-30T20:34:09.559Z">2022-12-01</time></p><p class="title"><a href="/2022/12/01/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/12/"><span class="level-start"><span class="level-item">December 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CI-CD/"><span class="tag">CI/CD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cloud-Server/"><span class="tag">Cloud Server</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cloudflare/"><span class="tag">Cloudflare</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DNS/"><span class="tag">DNS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github-actions/"><span class="tag">Github actions</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tag1/"><span class="tag">tag1</span><span class="tag">1</span></a></div></div></div></div></div><!--!--></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/avatar-innis.png" alt="Innis&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Innis Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuenci"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><div id="outdated"><h6>Your browser is out-of-date!</h6><p>Update your browser to view this website correctly.&amp;npsb;<a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p><p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">×</a></p></div><script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script><script>window.addEventListener("load", function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'object-fit' // display on IE11 or below
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>
