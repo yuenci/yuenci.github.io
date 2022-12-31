@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Css Discussion - Innis&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Innis&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Innis&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="对于React 中CSS的实施，有很多种方案，比如React 本身支持的  style  1234567const css &amp;#x3D; &amp;amp;#123;            border: &amp;quot;1px solid darkorange&amp;quot;,            borderRadius: &amp;quot;10px&amp;quot;,&amp;amp;#125;;return (    &amp;lt;button styl"><meta property="og:type" content="blog"><meta property="og:title" content="Css Discussion"><meta property="og:url" content="https://www.enjoycoding.me/2022/12/31/css-discussion/"><meta property="og:site_name" content="Innis&#039;s Blog"><meta property="og:description" content="对于React 中CSS的实施，有很多种方案，比如React 本身支持的  style  1234567const css &amp;#x3D; &amp;amp;#123;            border: &amp;quot;1px solid darkorange&amp;quot;,            borderRadius: &amp;quot;10px&amp;quot;,&amp;amp;#125;;return (    &amp;lt;button styl"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://www.enjoycoding.me/img/og_image.png"><meta property="article:published_time" content="2022-12-31T06:24:39.000Z"><meta property="article:modified_time" content="2022-12-31T07:16:54.472Z"><meta property="article:author" content="Innis Yu"><meta property="article:tag" content="css"><meta property="article:tag" content="React，CSS in JS"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.enjoycoding.me/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.enjoycoding.me/2022/12/31/css-discussion/"},"headline":"Css Discussion","image":["https://www.enjoycoding.me/img/og_image.png"],"datePublished":"2022-12-31T06:24:39.000Z","dateModified":"2022-12-31T07:16:54.472Z","author":{"@type":"Person","name":"Innis Yu"},"publisher":{"@type":"Organization","name":"Innis's Blog","logo":{"@type":"ImageObject","url":"https://www.enjoycoding.me/img/avatar-innis.png"}},"description":"对于React 中CSS的实施，有很多种方案，比如React 本身支持的  style  1234567const css &#x3D; &amp;#123;            border: &quot;1px solid darkorange&quot;,            borderRadius: &quot;10px&quot;,&amp;#125;;return (    &lt;button styl"}</script><link rel="canonical" href="https://www.enjoycoding.me/2022/12/31/css-discussion/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-S8CSWVRCPY" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-S8CSWVRCPY');</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css"><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/avatar-innis.png" alt="Innis&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-12-31T06:24:39.000Z" title="2022/12/31 14:24:39">2022-12-31</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-12-31T07:16:54.472Z" title="2022/12/31 15:16:54">2022-12-31</time></span><span class="level-item">7 minutes read (About 1053 words)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">Css Discussion</h1><div class="content"><p>对于React 中CSS的实施，有很多种方案，比如React 本身支持的</p>
+<ol>
+<li>style</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const css = &#123;</span><br><span class="line">            border: &quot;1px solid darkorange&quot;,</span><br><span class="line">            borderRadius: &quot;10px&quot;,</span><br><span class="line">&#125;;</span><br><span class="line">return (</span><br><span class="line">    &lt;button style=&#123;css&#125;&gt;&lt;/button&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>import</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &quot;./style.css&quot;</span><br><span class="line"></span><br><span class="line">return (</span><br><span class="line">    &lt;button className=&quot;btn&quot;&gt;&lt;/button&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="CSS-in-React-的问题"><a href="#CSS-in-React-的问题" class="headerlink" title="CSS in React 的问题"></a>CSS in React 的问题</h1><h2 id="1-CSS支持不足"><a href="#1-CSS支持不足" class="headerlink" title="1. CSS支持不足"></a>1. CSS支持不足</h2><span id="more"></span>
+
+<p>使用style引入的样式，无法支持复杂的嵌套、选择器等特性，使用起来很不方便。 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const Widget = () =&gt; &#123;</span><br><span class="line">  &lt;div style=&#123;&#123;</span><br><span class="line">      color: &#x27;white&#x27;,</span><br><span class="line">      fontSize: &#x27;12px&#x27; //可以注意到，这里用的并不是css的原生属性，而是react封装过的</span><br><span class="line">  &#125;&#125; onClick=&#123;() =&gt; doSometing()&#125;&gt;</span><br><span class="line">    text  </span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这就意味着需要使用第三方扩展来解决。</p>
+<h2 id="2-样式污染"><a href="#2-样式污染" class="headerlink" title="2. 样式污染"></a>2. 样式污染</h2><p>使用React impoet 进来的的css 在不同级别的导入会导致污染问题</p>
+<p>因为 CSS 是全局的，所以它会在整个应用程序的范围内生效。如果在父组件中导入了 CSS 文件，则它将在整个应用程序中生效，包括子组件。</p>
+<p>对此出现了两种解决方案：</p>
+<ol>
+<li>CSS in JS （例如emotionJS 库，styled-components库）</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://github.com/emotion-js/emotion">https://github.com/emotion-js/emotion</a></p>
+<p><a target="_blank" rel="noopener" href="https://styled-components.com/">https://styled-components.com/</a></p>
+<ol start="2">
+<li>CSS Modules</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://github.com/css-modules/css-modules">https://github.com/css-modules/css-modules</a></p>
+<h1 id="CSS-in-JS"><a href="#CSS-in-JS" class="headerlink" title="CSS in JS"></a>CSS in JS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import &#123; css &#125; from &#x27;@emotion/css&#x27;</span><br><span class="line"></span><br><span class="line">const color = &#x27;white&#x27;</span><br><span class="line"></span><br><span class="line">render(</span><br><span class="line">  &lt;div</span><br><span class="line">    className=&#123;css`</span><br><span class="line">      padding: 32px;</span><br><span class="line">      background-color: hotpink;</span><br><span class="line">      font-size: 24px;</span><br><span class="line">      border-radius: 4px;</span><br><span class="line">      &amp;:hover &#123;</span><br><span class="line">        color: $&#123;color&#125;;</span><br><span class="line">      &#125;</span><br><span class="line">    `&#125;</span><br><span class="line">  &gt;</span><br><span class="line">    Hover to change color.</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>CSS in JS 的好处是：</p>
+<ol>
+<li>局部作用：样式只会被局限在组件里，不会影响外部</li>
+<li>关注点分离：与组件相关的所有内容都在同一位置</li>
+<li>可以在样式中使用JS变量</li>
+</ol>
+<p>不过 CSS in JS 也有缺点</p>
+<ol>
+<li>增加运行开销，需要把CSS从js取出后再渲染</li>
+<li>增加包的大小（EmotionJS 7.9kb）</li>
+<li>CSS-in-JS 使 React DevTools 混乱</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b">https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b</a></p>
+<h1 id="CSS-Modules"><a href="#CSS-Modules" class="headerlink" title="CSS Modules"></a>CSS Modules</h1><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/news/introduction-to-css-modules-part-one/">https://www.freecodecamp.org/chinese/news/introduction-to-css-modules-part-one/</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/css-modules/css-modules">https://github.com/css-modules/css-modules</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2016/06/css_modules.html">https://www.ruanyifeng.com/blog/2016/06/css_modules.html</a></p>
+<p>CSS Modules 是一种用于在 JavaScript 模块中使用本地 CSS 的方法。它允许在模块内定义 CSS 类名，并且可以将这些类名映射到最终应用程序中使用的唯一名称。</p>
+<p>这意味着可以在不担心命名冲突的情况下使用简单的、可读的 CSS 类名，而不必使用全局命名空间前缀或自定义哈希字符串来避免命名冲突。</p>
+<p>背后的工作原理是构架工具生成的哈希字符串</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App.js */</span></span><br><span class="line"><span class="selector-class">.title</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// app.jsx</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">import style from &#x27;./App.css&#x27;;</span><br><span class="line"></span><br><span class="line">export default () =&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;h1 className=&#123;style.title&#125;&gt;</span><br><span class="line">      Hello World</span><br><span class="line">    &lt;/h1&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面的内容经过构建工具的构建，将会生成</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">._3zyde4l1yATCOkgn-DBWEL &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;_3zyde4l1yATCOkgn-DBWEL&quot;</span>&gt;</span></span><br><span class="line">  Hello World</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样一来，这个类名就变成独一无二了，只对<code>App</code>组件有效，不再会造成样式污染。</p>
+<p>因为在使用className的时候，已经有一定的关系表达，所以BEM规范不再是必须的</p>
+<h1 id="BEM规范"><a href="#BEM规范" class="headerlink" title="BEM规范"></a>BEM规范</h1><p>BEM（Block-Element-Modifier）是一种用于构建可维护的、可重用的、高内聚的组件的命名方法论。它是由 Yandex 团队创建的，旨在帮助开发人员在编写 CSS 代码时组织命名约定。</p>
+<p>BEM 的基本概念是块（Block）、元素（Element）和修饰符（Modifier）。</p>
+<ul>
+<li>块（Block）是独立的组件，例如导航栏、按钮或输入框。块通常被表示为一个顶级类，并使用下划线来与其他命名隔离，例如 <code>.navbar</code>。</li>
+<li>元素（Element）是块的内部组件，例如导航栏中的菜单项或按钮中的图标。元素通常被表示为块名称加两个下划线的类，例如 <code>.navbar__item</code>。</li>
+<li>修饰符（Modifier）是用于修改块或元素的行为或外观的类，例如按钮的大小或颜色。修饰符通常被表示为块或元素名称加两个连字符的类，例如 <code>.btn--large</code> 或 <code>.navbar__item--active</code>。</li>
+</ul>
+<p>BEM 的目的是通过组织命名约定来让 CSS 代码更加可维护和可重用。例如，如果使用 BEM 的命名约定，则可以轻松地找到块中的所有元素和修饰符，而且每个元素都有自己的唯一的名称来标定。</p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/@seanmcp/how-and-when-to-use-bem-in-react-edabad2b805a">https://medium.com/@seanmcp/how-and-when-to-use-bem-in-react-edabad2b805a</a></p>
+<p><a target="_blank" rel="noopener" href="https://css-tricks.com/bem-101/">https://css-tricks.com/bem-101/</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Css Discussion</p><p><a href="https://www.enjoycoding.me/2022/12/31/css-discussion/">https://www.enjoycoding.me/2022/12/31/css-discussion/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Innis Yu</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-12-31</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-12-31</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/css/">css</a><a class="link-muted mr-2" rel="tag" href="/tags/React%EF%BC%8CCSS-in-JS/">React，CSS in JS</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=63881f71528682001353ba09&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/12/25/deployed-a-full-stack-appliaction/"><span class="level-item">Deployed a full-stack appliaction</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "35ad0356d93c69ad32103e566a627df6",
+            repo: "gitalk-repo",
+            owner: "yuenci",
+            clientID: "1bc37069218d6469540b",
+            clientSecret: "88e5518a58782b1ff39ea7c424ecc56f0ce68841",
+            admin: ["yuenci"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "en",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar-innis.png" alt="Innis Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Innis Yu</p><p class="is-size-6 is-block">Hacker &amp; Full Stack Engineer</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuenci" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/yuenci"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://enjoycoding.me/code/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Code interpreter</span></span><span class="level-right"><span class="level-item tag">enjoycoding.me</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-31T06:24:39.000Z">2022-12-31</time></p><p class="title"><a href="/2022/12/31/css-discussion/">Css Discussion</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-25T05:57:56.000Z">2022-12-25</time></p><p class="title"><a href="/2022/12/25/deployed-a-full-stack-appliaction/">Deployed a full-stack appliaction</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-01T17:07:12.000Z">2022-12-02</time></p><p class="title"><a href="/2022/12/02/about/">About</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-30T20:34:09.559Z">2022-12-01</time></p><p class="title"><a href="/2022/12/01/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/12/"><span class="level-start"><span class="level-item">December 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CI-CD/"><span class="tag">CI/CD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cloud-Server/"><span class="tag">Cloud Server</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cloudflare/"><span class="tag">Cloudflare</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DNS/"><span class="tag">DNS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github-Actions/"><span class="tag">Github Actions</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React%EF%BC%8CCSS-in-JS/"><span class="tag">React，CSS in JS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/css/"><span class="tag">css</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tag1/"><span class="tag">tag1</span><span class="tag">1</span></a></div></div></div></div></div><!--!--></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/avatar-innis.png" alt="Innis&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Innis Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuenci"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><div id="outdated"><h6>Your browser is out-of-date!</h6><p>Update your browser to view this website correctly.&amp;npsb;<a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p><p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">×</a></p></div><script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script><script>window.addEventListener("load", function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'object-fit' // display on IE11 or below
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>
