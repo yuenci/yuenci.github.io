@@ -1,1 +1,15 @@
-{"name":"Innis's Blog","short_name":null,"start_url":"/index.html","theme_color":null,"background_color":null,"display":"standalone","icons":[{"src":"","sizes":"","type":null}]}
+{
+    "name": "Innis's Blog",
+    "short_name": "Innis's Blog",
+    "start_url": "/index.html",
+    "theme_color": "#4dabf7",
+    "background_color": "#4dabf7",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "",
+            "sizes": "",
+            "type": null
+        }
+    ]
+}
